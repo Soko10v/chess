@@ -19,11 +19,12 @@ class figure:
         # 0-white
         # 1-black
 
-    @property
+    #@property
     def getname(self):
         a = self.typ + self.colour
         return a
 
+    @property
     def move(self, int1, int2):
         figure.posX = int1
         figure.posY = int2
@@ -60,8 +61,14 @@ class bishop(figure):
 
 
 class rook(figure):
-    def __init__(self, clour, posX, posY):
-        pass
+    typ = "R"
+
+    def __init__(self, colour, posX, posY):
+        self.posX = posX
+        self.posY = posY
+        self.colour = colour
+
+    name = "R"
 
     def __delete__(self, instance):
         pass
